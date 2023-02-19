@@ -2,9 +2,9 @@
   "name": "vercel",
   "version": 2,
   "public": true,
-  "builds": [{ "src": "server.js", "use": "@vercel/node" }],
+  "builds": [{ "src": "index.js", "use": "@vercel/node" }],
   "routes": [{
     "src": "(.*)",
-    "dest": "server.js"
+    "dest": "index.js"
   }]
 }
