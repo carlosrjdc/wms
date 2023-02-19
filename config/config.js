@@ -1,34 +1,32 @@
-
-
-const fs = require('fs');
+const fs = require("fs");
+require("dotenv").config();
 
 module.exports = {
   development: {
-    username: "bouavi08_carlos",
-    password: "Lactalis@2022",
-    database: "bouavi08_wms",
-    host: "192.185.210.120",
-    port:3306,
+    username: process.env.USUARIOSQL,
+    password: process.env.PASSSQL,
+    database: process.env.DATABASESQL,
+    host: process.env.HOSTSQL,
+    port: 3306,
     dialect: "mysql",
-    dialectModule:require("mysql2")
+    dialectModule: require("mysql2"),
   },
   test: {
-    username: "bouavi08_carlos",
-    password: "Lactalis@2022",
-    database: "bouavi08_wms",
-    host: "192.185.210.120",
-    port:3306,
+    username: process.env.USUARIOSQL,
+    password: process.env.PASSSQL,
+    database: process.env.DATABASESQL,
+    host: process.env.HOSTSQL,
+    port: 3306,
     dialect: "mysql",
-    dialectModule:require("mysql2")
+    dialectModule: require("mysql2"),
   },
   production: {
-    username: "bouavi08_carlos",
-    password: "Lactalis@2022",
-    database: "bouavi08_wms",
-    host: "192.185.210.120",
-    port:3306,
+    username: process.env.USUARIOSQL,
+    password: process.env.PASSSQL,
+    database: process.env.DATABASESQL,
+    host: process.env.HOSTSQL,
+    port: 3306,
     dialect: "mysql",
-    dialectModule:require("mysql2")
-  }
+    dialectModule: require("mysql2"),
+  },
 };
-
