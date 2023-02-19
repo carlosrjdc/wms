@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const Sequelize =require("sequelize")
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -11,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.hasMany(models.Ravex_Retorno_Nota,{
-        foreignKey:conferenteId
+        foreignKey: "conferenteId"
       })
       // define association here
     }
