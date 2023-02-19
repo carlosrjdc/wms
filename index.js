@@ -10,7 +10,7 @@ route.get("/", (req, res) => {
   });
 
   route.get("/user", (req, res)=> {
-    const dados = db.User.findAll().then( response => res.status(200).json(response)).catch(err => console.log)
+    const dados = db.User.findAll().then(response => res.status(200).json(response)).catch(erro=> console.log(erro))
   })
 
 app.use(route);
