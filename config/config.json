@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "bouavi08_carlos",
+    "password": "Lactalis@2022",
+    "database": "bouavi08_wms",
+    "host": "192.185.210.120",
+    "port":3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "bouavi08_carlos",
+    "password": "Lactalis@2022",
+    "database": "bouavi08_wms",
+    "host": "192.185.210.120",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "bouavi08_carlos",
+    "password": "Lactalis@2022",
+    "database": "bouavi08_wms",
+    "host": "192.185.210.120",
+    "dialect": "mysql"
+  }
+}
