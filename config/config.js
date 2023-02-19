@@ -19,7 +19,7 @@ module.exports = {
     host: "192.185.210.120",
     port:3306,
     dialect: "mysql",
-    dialectModule:"mysql2"
+    dialectModule:require("mysql2")
   },
   production: {
     username: "bouavi08_carlos",
@@ -28,7 +28,7 @@ module.exports = {
     host: "192.185.210.120",
     port:3306,
     dialect: "mysql",
-    dialectModule:"mysql2"
+    dialectModule:require("mysql2")
   }
 };
 
