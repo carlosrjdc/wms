@@ -1,21 +1,7 @@
-const express = require("express");
-const { Router } = require("express");
-const app = express();
-const db = require("./models");
-require("dotenv").config();
+const app = require("./src/routes/app.js");
 
-const route = Router();
+const port = process.env.PORT || 3000;
 
-route.get("/", (req, res) => {
-  console.log(process.env.USUARIOSQL);
-  return res.json({ sucesso: true, message: "Sucesso" });
+app.listen(port, () => {
+  console.log(`Escutando requisição na Porta http://localhost:${port}`);
 });
-
-route.get("/user", (req, res) => {
-  const dados = db.User.findAll()
-    .then((response) => res.status(200).json(response))
-    .catch((erro) => console.log(erro));
-});
-
-app.use(route);
-app.listen(4000, () => console.log("server rodando"));
