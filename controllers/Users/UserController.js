@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../../models");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
@@ -8,7 +8,21 @@ const user = db.User;
 class UserController {
   static buscarUsuarios = async (req, res) => {
     try {
-      const Usuario = await user.findAll();
+      const Usuario = await user.findAll({
+        attributes: ["usuario", "nome", "email"],
+      });
+      res.status(200).json(Usuario);
+    } catch (erro) {
+      return res.status(500).json(erro.message);
+    }
+  };
+  static editarUsuario = async (req, res) => {
+    try {
+      const Usuario = await user.update(req.body, {
+        where: {
+          usuario: req.params.id,
+        },
+      });
       res.status(200).json(Usuario);
     } catch (erro) {
       return res.status(500).json(erro.message);

@@ -11,6 +11,7 @@ module.exports = async function checkLogin(req, res, next) {
   try {
     const secret = process.env.SECRET;
     jwt.verify(token, secret);
+
     next();
   } catch (erro) {
     res.status(401).json({ msg: "Token Invalido" });
